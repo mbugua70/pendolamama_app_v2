@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/validation.css" />
+    <title>production</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center">Pre Production</span>
+          <a href="../index.html" class="right home-icon" id="home-el">
+            <i class="material-icons">home</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card-panel">
+        <h4>Personal Information</h4>
+        <div class="profile">
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> person </span>
+              <span class="user_name">Name</span>
+            </div>
+            <span class="user_detail users_input" id="users_name">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> call </span>
+              <span class="user_phone">Contact</span>
+            </div>
+            <span class="user_phones users_input" id="contact_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> home_pin </span>
+              <span class="user_location">County</span>
+            </div>
+            <span class="user_locations users_input" id="county_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> location_on </span>
+              <span class="sub_county">Sub county</span>
+            </div>
+            <span class="user_locations users_input" id="sub_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="location_gps">
+        <h4 class="">Load your location</h4>
+        <div class="location_gps_two">
+          <input
+            type="number"
+            name="register_longitude"
+            id="register_longitude"
+            placeholder="Longitude"
+            readonly
+          />
+          <input
+            type="number"
+            name="register_latitude"
+            id="register_latitude"
+            placeholder="Latitude"
+            readonly
+          />
+        </div>
+        <button class="btn location_button" id="btn_location">
+          load
+          <div class="preloader-wrapper small active" id="preloader_one">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card-panel card-relative">
+        <form class="form" id="form">
+          <h4>Fill out the form</h4>
+          <label for="pre_date">Date</label>
+          <input
+            class="input"
+            type="date"
+            name="pre_date"
+            id="pre_date"
+            placeholder="Enter date"
+            required
+          />
+          <label for="pre_gpname">Group Name</label>
+          <input
+            class="input"
+            type="text"
+            name="pre_gpname"
+            id="pre_gpname"
+            placeholder="Enter group name"
+            required
+          />
+          <label for="pre_mtvenue">Meeting Venue</label>
+          <input
+            class="input"
+            type="text"
+            name="pre_mtvenue"
+            id="pre_mtvenue"
+            placeholder="Enter meeting venue"
+            required
+          />
+          <label for="pre_day">Meeting Days</label>
+          <input
+            class="input"
+            type="text"
+            name="pre_day"
+            id="pre_day"
+            placeholder="Enter meeting days, e.g sunday"
+            required
+          />
+          <label for="pre_meetingfr"> Frequency of meetings </label>
+          <input
+            class="input"
+            type="text"
+            name="pre_meetingfr"
+            id="pre_meetingfr"
+            placeholder="E.g Daily,Weekly,Monthly"
+            required
+          />
+          <!-- <label for="pre_county">County</label>
+          <input
+            class="input register_county"
+            type="text"
+            name="pre_county"
+            id="pre_county"
+            placeholder="Enter the county"
+            required
+          /> -->
+          <!-- <label for="pre_subcounty">Sub County</label>
+          <input
+            class="input register_sub"
+            type="text"
+            name="pre_subcounty"
+            id="pre_subcounty"
+            placeholder="Enter sub-county"
+            required
+          /> -->
+
+          <label for="pre_village">Village</label>
+          <input
+            class="input"
+            type="text"
+            name="pre_village"
+            id="pre_village"
+            placeholder="Enter the village name"
+            required
+          />
+          <label for="pre_chairperson">Chair person name</label>
+          <input
+            class="input"
+            type="text"
+            name="pre_chairperson"
+            id="pre_chairperson"
+            placeholder="Enter the name"
+            required
+          />
+          <label for="pre_contacts">Contact</label>
+          <input
+            class="input"
+            type="tel"
+            name="pre_contacts"
+            id="pre_contacts"
+            placeholder="Tel e.g 0728**"
+            required
+          />
+          <div class="error_contact" id="err_hidden">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div>
+          <!-- <div class="error_contact">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div> -->
+          <label for="pre_altcontact">Alternative contact person name</label>
+          <input
+            type="text"
+            name="pre_altcontact"
+            id="pre_altcontact"
+            placeholder="Enter the name"
+            class="input"
+            required
+          />
+          <label for="pre_contacts2">contact</label>
+          <input
+            type="tel"
+            name="pre_contacts2"
+            id="pre_contacts2"
+            placeholder="Tel e.g 0728**"
+            class="input"
+            required
+          />
+          <div class="error_contact" id="err_hidden_two">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div>
+          <!-- <div class="error_contact">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div> -->
+          <!-- form 2 -->
+          <h4>Marchandise Reconciliation</h4>
+          <label for="marchpre_tout">T-Shirt Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_tout"
+            id="marchpre_tout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_kangaout">Khangas Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_kangaout"
+            id="marchpre_kangaout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_tumblerout">Tumblers Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_tumblerout"
+            id="marchpre_tumblerout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_bbout">Blue Band Sachet Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_bbout"
+            id="marchpre_bbout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_lunchout">Lunch Boxes Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_lunchout"
+            id="marchpre_lunchout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_blowsout">Bowls Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_blowsout"
+            id="marchpre_blowsout"
+            placeholder="0"
+            required
+          />
+          <label for="marchpre_apronsout">Aprons Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_apronsout"
+            id="marchpre_apronsout"
+            placeholder="Enter number"
+            required
+          />
+          <label for="marchpre_activiities">Group Activities</label>
+          <input
+            class="input"
+            type="text"
+            name="marchpre_activiities"
+            id="marchpre_activiities"
+            placeholder="Enter group activities"
+            required
+          />
+          <label for="marchpre_prizes">Proposed Activities</label>
+          <input
+            class="input"
+            type="text"
+            name="marchpre_prizes"
+            id="marchpre_prizes"
+            placeholder="Enter proposed prizes"
+            required
+          />
+          <label for="marchpre_totalmbs">Total Group Members</label>
+          <input
+            class="input"
+            type="number"
+            name="marchpre_totalmbs"
+            id="marchpre_totalmbs"
+            placeholder="Enter the total group members"
+            required
+          />
+          <label for="marchpre_mobilizer">Mobilizer</label>
+          <input
+            class="input"
+            type="text"
+            name="marchpre_mobilizer"
+            id="marchpre_mobilizer"
+            placeholder="Enter the name"
+            required
+          />
+          <label for="marchpre_contact">Contact</label>
+          <input
+            class="input"
+            type="tel"
+            name="marchpre_contact"
+            id="marchpre_contact"
+            placeholder="Tel e.g 0728**"
+            required
+          />
+          <div class="error_contact" id="err_hidden_three">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div>
+
+          <button class="btn-large" type="submit" id="button">
+            submit <i class="material-icons waves-effect waves-light">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/sweet.js"></script>
+    <script src="../nav/home.js"></script>
+    <script src="../nav/localupload.js"></script>
+    <script src="../nav/formpre.js"></script>
+    <script src="../nav/validation.js"></script>
+    <script src="../js/location.js"></script>
+  </body>
+</html>

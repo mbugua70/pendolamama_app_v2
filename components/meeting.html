@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/validation.css" />
+    <title>Chama Meeting</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center">Chama Meeting</span>
+          <a href="../index.html" class="right home-icon" id="home-el">
+            <i class="material-icons">home</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card-panel">
+        <h4>Personal Information</h4>
+        <div class="profile">
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> person </span>
+              <span class="user_name">Name</span>
+            </div>
+            <span class="user_detail users_input" id="users_name">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> call </span>
+              <span class="user_phone">Contact</span>
+            </div>
+            <span class="user_phones users_input" id="contact_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> home_pin </span>
+              <span class="user_location">County</span>
+            </div>
+            <span class="user_locations users_input" id="county_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> location_on </span>
+              <span class="sub_county">Sub county</span>
+            </div>
+            <span class="user_locations users_input" id="sub_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="location_gps">
+        <h4 class="">Load your location</h4>
+        <div class="location_gps_two">
+          <input
+            type="number"
+            name="register_longitude"
+            id="register_longitude"
+            placeholder="Longitude"
+            readonly
+          />
+          <input
+            type="number"
+            name="register_latitude"
+            id="register_latitude"
+            placeholder="Latitude"
+            readonly
+          />
+        </div>
+        <button class="btn location_button" id="btn_location">
+          load
+          <div class="preloader-wrapper small active" id="preloader_one">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card-panel card-relative">
+        <div class="error card-panel" id="error_el">
+          <div class="error_two">
+            <div class="flex">
+              <h4>Success</h4>
+              <p>Your details are successfully submitted!</p>
+            </div>
+            <button class="btn-floating" id="buttons">OK</button>
+          </div>
+        </div>
+        <div class="error_input_two card-panel" id="error_el_two">
+          <div class="error_two">
+            <div class="flex">
+              <h4>Oh no!</h4>
+              <p>Operation has not been completed!!</p>
+            </div>
+            <button class="btn-floating btn-floating_two" id="buttons_two">
+              OK
+            </button>
+          </div>
+        </div>
+
+        <form class="form" id="form">
+          <h4>Fill out the form</h4>
+          <label for="chama_date">Date</label>
+          <input
+            type="date"
+            name="chama_date"
+            id="chama_date"
+            placeholder="Enter date"
+            required
+          />
+          <label for="chama_gpname">Group Name</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_gpname"
+            id="chama_gpname"
+            placeholder="Enter group name"
+            required
+          />
+          <label for="chama_venue">Venue</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_venue"
+            id="chama_venue"
+            placeholder="Enter meeting venue"
+            required
+          />
+          <!-- <label for="chama_county_town">County/Town</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_county_town"
+            id="chama_county_town"
+            placeholder="Enter county or town"
+            required
+          /> -->
+          <!-- <label for="chama_sub_county">Sub County</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_sub_county"
+            id="chama_sub_county"
+            placeholder="Enter sub-county"
+            required
+          /> -->
+          <label for="chama_village">Village</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_village"
+            id="chama_village"
+            placeholder="Enter village"
+            required
+          />
+          <label for="chama_participant">Participant</label>
+          <input
+            class="input"
+            type="text"
+            name="chama_participant"
+            id="chama_participant"
+            placeholder="Enter the name"
+            required
+          />
+          <label for="chama_contacts">Contacts</label>
+          <input
+            class="input"
+            type="tel"
+            name="chama_contacts"
+            id="chama_contacts"
+            placeholder="Tel e.g 0728**"
+            required
+          />
+          <div class="error_contact" id="err_hidden_three">
+            <span><i class="material-icons">error</i></span>
+            <p>Please enter valid contact number</p>
+          </div>
+          <!-- form 2 -->
+          <h4>Marchandise Reconciliation</h4>
+          <label for="march_recon_tshirt">T-Shirt Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_tshirt"
+            id="march_recon_tshirt"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_khangas">Khangas Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_khangas"
+            id="march_recon_khangas"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_tumbler">Tumblers Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_tumbler"
+            id="march_recon_tumbler"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_blueband">Blue Band Sachet Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_blueband"
+            id="march_recon_blueband"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_lunch_boxes">Lunch Boxes Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_lunch_boxes"
+            id="march_recon_lunch_boxes"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_bowls">Bowls Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_bowls"
+            id="march_recon_bowls"
+            placeholder="0"
+            required
+          />
+          <label for="march_recon_aprons">Aprons Issued Out</label>
+          <input
+            class="input"
+            type="number"
+            name="march_recon_aprons"
+            id="march_recon_aprons"
+            placeholder="0"
+            required
+          />
+          <button type="submit" class="btn-large">
+            submit <i class="material-icons waves-effect waves-light">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/sweet.js"></script>
+    <script src="../nav/home.js"></script>
+    <script src="../nav/localupload.js"></script>
+    <script src="../nav/formmeeting.js"></script>
+    <script src="../js/location.js"></script>
+  </body>
+</html>

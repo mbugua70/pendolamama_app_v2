@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/validation.css" />
+    <title>Challenges</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <span class="brand-logo center question"> Challenges</span>
+          <a href="../index.html" class="right home-icon" id="home-el">
+            <i class="material-icons">home</i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="card-panel">
+        <h4>Personal Information</h4>
+        <div class="profile">
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> person </span>
+              <span class="user_name">Name</span>
+            </div>
+            <span class="user_detail users_input" id="users_name">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> call </span>
+              <span class="user_phone">Contact</span>
+            </div>
+            <span class="user_phones users_input" id="contact_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> home_pin </span>
+              <span class="user_location">County</span>
+            </div>
+            <span class="user_locations users_input" id="county_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="details">
+            <div class="user">
+              <span class="material-symbols-outlined"> location_on </span>
+              <span class="sub_county">Sub county</span>
+            </div>
+            <span class="user_locations users_input" id="sub_els">
+              <div
+                class="preloader-wrapper small active preloader_element"
+                id="preloader_one"
+              >
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="location_gps">
+        <h4 class="">Load your location</h4>
+        <div class="location_gps_two">
+          <input
+            type="number"
+            name="register_longitude"
+            id="register_longitude"
+            placeholder="Longitude"
+            readonly
+          />
+          <input
+            type="number"
+            name="register_latitude"
+            id="register_latitude"
+            placeholder="Latitude"
+            readonly
+          />
+        </div>
+        <button class="btn location_button" id="btn_location">
+          load
+          <div class="preloader-wrapper small active" id="preloader_one">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="card-panel card-relative challenge">
+        <div class="error card-panel" id="error_el">
+          <div class="error_two">
+            <div class="flex">
+              <h4>Success</h4>
+              <p>Your details are successfully submitted!</p>
+            </div>
+            <button class="btn-floating" id="buttons">OK</button>
+          </div>
+        </div>
+        <div class="error_input_two card-panel" id="error_el_two">
+          <div class="error_two">
+            <div class="flex">
+              <h4>Oh no!</h4>
+              <p>Operation has not been completed!!</p>
+            </div>
+            <button class="btn-floating btn-floating_two" id="buttons_two">
+              OK
+            </button>
+          </div>
+        </div>
+
+        <form class="form" id="form">
+          <h4>Fill out the form</h4>
+          <label for="challenge_date">Date</label>
+          <input
+            class="input"
+            type="date"
+            name="challenge_date"
+            id="challenge_date"
+            placeholder="Enter date"
+            required
+          />
+          <label for="challenge_ch">Challenge</label>
+          <textarea
+            name="challenge_ch"
+            id="challenge_ch"
+            placeholder="Challenge"
+            class="challenge_style"
+          ></textarea>
+          <button type="submit" class="btn-large" id="button">
+            submit <i class="material-icons">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="../nav/home.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/sweet.js"></script>
+    <script src="../nav/localupload.js"></script>
+    <script src="../nav/formchallenges_two.js"></script>
+    <script src="../js/location.js"></script>
+  </body>
+</html>
